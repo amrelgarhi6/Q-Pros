@@ -1,18 +1,18 @@
-# Test Automation Framework [Foodics Task]
+# Test Automation Framework [Q-Pros Task]
 
 ## 1. Project Overview
 
 This is a **hybrid test automation framework** that supports testing across:
 
-* **Web platform** (e.g., [Amazon Egypt](https://www.amazon.eg/-/en/ref=nav_logo))
-* **Mobile applications** (Android/iOS)
-* **REST APIs** (e.g., [Reqres API](https://reqres.in/))
+* **Web platform** (e.g., [Automation practice](https://practice.automationtesting.in/))
+* **Mobile application** [Android](https://play.google.com/store/apps/details?id=com.info.weather.forecast&pli=1))
+* **REST APIs** (e.g., [Petstore API](https://petstore3.swagger.io/))
 
 ### Use Cases:
 
-* **API Testing:** Performs CRU operations on the `/users` endpoint of `https://reqres.in/`
-* **Web Testing:** Adds products priced between **10,000 and 15,000 EGP** to the cart and verifies total cart price.
-* **Mobile Testing:** Covered using Appium-based test cases.
+* **API Testing:** Performs CRUD operations on the `api3/users` endpoint of `https://petstore3.swagger.io/`
+* **Web Testing:** Add a book from the home page and add to cart with submit checkout
+* **Mobile Testing:** Covered using Appium-based test cases for the Weather app to change **temperature unit** and **time format**
 
 ---
 
@@ -72,7 +72,7 @@ This is a **hybrid test automation framework** that supports testing across:
 mvn clean test -DsuiteXmlFile=testng-web.xml
 mvn clean test -DsuiteXmlFile=testng-api.xml
 mvn clean test -DsuiteXmlFile=testng-mobile.xml
-mvn clean test -DsuiteXmlFile=WebParallel.xml  > for running parallel browser ? Please update Hooks.class before running parallel with 
+mvn clean test -DsuiteXmlFile=WebParallel.xml  > for running parallel browser ? Please update Hooks.class before running in parallel with 
 ## 🧪 Web Test Setup
 
 
@@ -106,6 +106,7 @@ You can run directly from:
 * `testng-api.xml`
 * `testng-mobile.xml`
 * `WebParallel.xml`
+* `testng-Parallel-All-Execution.xml`
 
 ---
 
@@ -129,11 +130,14 @@ You can run directly from:
 
 ### Allure Report Preview:
 
-📸 [View Screenshot](screenshots/allure-example.png)
+📸 [View Screenshot](screenshots/Test result E2E scenario.png)
 
 ### Allure Report URL (example):
 
 📎 `http://localhost:63342/allure-report/index.html`
+
+### Use this command in terminal to run Allure report after execution
+📎 `allure serve allure-results`
 
 ---
 
@@ -174,7 +178,8 @@ mvn test -DsuiteXmlFile=testng-api.xml
 ## 9. Contact
 
 **Author:** AMR EL-GARHI
-
+**Phone-Number
+** `01097590125`
 📧 Email : [amrahmedibra6@gmail.com](mailto:amrahmedibra6@gmail.com)
 
 💼 LinkedIn : [https://www.linkedin.com/in/amr-el-garhi-7a29521b4/y](https://www.linkedin.com/in/amr-el-garhi-7a29521b4/)
