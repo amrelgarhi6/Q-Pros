@@ -1,0 +1,25 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"  As a user
+  I want to browse and purchase a book
+  So that I can buy this book and fill payment form","2504","Validate adding a book to cart and proceed to checkout","","Mon May 19 15:59:16 EEST 2025","passed","Mon May 19 15:59:19 EEST 2025","","E2E Shopping flow for buying a new bool","Validate adding a book to cart and proceed to checkout",""
+"","10","Validate that GET /user/{username} returns user details for existing user","","Mon May 19 00:17:24 EEST 2025","broken","Mon May 19 00:17:24 EEST 2025","","Test Get User/Endpoint operation on Petstore API","Validate that GET /user/{username} returns user details for existing user",""
+"","277","Validate that the Post /users Endpoint create a new user when sending a valid request.","","Sun May 18 22:39:33 EEST 2025","passed","Sun May 18 22:39:34 EEST 2025","","Validate CRU [Create - Read - Update] for Users endpoint","Validate that the Post /users Endpoint create a new user when sending a valid request.",""
+"  As a user
+  I want to browse and purchase a book
+  So that I can buy this book and fill payment form","2563","Validate adding a book to cart and proceed to checkout","","Mon May 19 15:59:07 EEST 2025","passed","Mon May 19 15:59:10 EEST 2025","","E2E Shopping flow for buying a new bool","Validate adding a book to cart and proceed to checkout",""
+"  As a user
+  I want to browse and purchase a book
+  So that I can buy this book and fill payment form","44514","Validate adding a book to cart and proceed to checkout","","Mon May 19 15:58:16 EEST 2025","passed","Mon May 19 15:59:00 EEST 2025","","E2E Shopping flow for buying a new bool","Validate adding a book to cart and proceed to checkout",""
+"","728","Validate DELETE /user/{username} fails for non-existent users","","Mon May 19 15:12:45 EEST 2025","failed","Mon May 19 15:12:45 EEST 2025","","Test Delete User/Endpoint operation on Petstore API","Validate DELETE /user/{username} fails for non-existent users",""
+"","366","Validate that the Get /users with specific {ID} Endpoint get this user when sending a valid request.","","Sun May 18 22:39:33 EEST 2025","passed","Sun May 18 22:39:33 EEST 2025","","Validate CRU [Create - Read - Update] for Users endpoint","Validate that the Get /users with specific {ID} Endpoint get this user when sending a valid request.",""
+"","1652","Validate POST /user fails with missing body in request","","Mon May 19 00:52:06 EEST 2025","passed","Mon May 19 00:52:07 EEST 2025","","Test Create User/Endpoint operation on Petstore API","Validate POST /user fails with missing body in request",""
+"","1655","End-to-End User lifecycle (Create → Read → Update → Delete) for user/Endpoint","","Mon May 19 15:12:43 EEST 2025","failed","Mon May 19 15:12:45 EEST 2025","","Test User CRUD operations on Petstore API for user/Endpoint","End-to-End User lifecycle (Create → Read → Update → Delete) for user/Endpoint",""
+"","743","Validate GET /user/{username} fails for invalid usernames","","Mon May 19 15:12:45 EEST 2025","failed","Mon May 19 15:12:46 EEST 2025","","Test Get User/Endpoint operation on Petstore API","Validate GET /user/{username} fails for invalid usernames",""
+"","1699","Validate that POST /user creates a new user with valid data","","Mon May 19 00:17:24 EEST 2025","failed","Mon May 19 00:17:26 EEST 2025","","Test Create User/Endpoint operation on Petstore API","Validate that POST /user creates a new user with valid data",""
+"  As a user
+  I want to browse and purchase a book
+  So that I can buy this book and fill payment form","8441","Validate adding 'Thinking in HTML' book to cart and proceed to checkout","","Mon May 19 15:11:21 EEST 2025","passed","Mon May 19 15:11:29 EEST 2025","","E2E Shopping flow for ""Thinking in HTML"" book","Validate adding 'Thinking in HTML' book to cart and proceed to checkout",""
+"","718","Validate POST /user fails with missing body in request","","Mon May 19 15:12:46 EEST 2025","passed","Mon May 19 15:12:47 EEST 2025","","Test Create User/Endpoint operation on Petstore API","Validate POST /user fails with missing body in request",""
+"","9","Validate that PUT /user/{username} updates user data successfully","","Mon May 19 00:17:26 EEST 2025","broken","Mon May 19 00:17:26 EEST 2025","","Test Put User/Endpoint operation on Petstore API","Validate that PUT /user/{username} updates user data successfully",""
+"","1320","Validate that the Post /users Endpoint create a new user when sending a valid request.","","Sun May 18 22:39:32 EEST 2025","passed","Sun May 18 22:39:33 EEST 2025","","Validate CRU [Create - Read - Update] for Users endpoint","Validate that the Post /users Endpoint create a new user when sending a valid request.",""
+"","725","Validate PUT /user/{username} fails with invalid update data","","Mon May 19 15:12:47 EEST 2025","passed","Mon May 19 15:12:48 EEST 2025","","Test Put User/Endpoint operation on Petstore API","Validate PUT /user/{username} fails with invalid update data",""

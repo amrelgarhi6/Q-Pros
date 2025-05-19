@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Running All Test Suites" parallel="tests" thread-count="4">
+
+    <!-- API Regression Tests -->
+    <test name="API Regression Test">
+        <classes>
+            <class name="runners.TestRunnerAPI"/>
+        </classes>
+    </test>
+
+    <!-- Mobile (Android) Tests -->
+    <test name="Android Regression Test">
+        <parameter name="PlatformName" value="Android"/>
+        <classes>
+            <class name="runners.TestRunnerMobile"/>
+        </classes>
+    </test>
+
+    <!-- Web Test - Chrome -->
+    <test name="Web Test - Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="runners.TestRunnerWeb"/>
+        </classes>
+    </test>
+
+    <!-- Web Test - Firefox -->
+    <test name="Web Test - Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="runners.TestRunnerWeb"/>
+        </classes>
+    </test>
+
+</suite>

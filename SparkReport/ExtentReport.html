@@ -1,0 +1,1133 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Extent Framework</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Build 1</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">May 19, 2025 21:51:02</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>May 19, 2025 21:51:02</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>May 19, 2025 21:51:08</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>3</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>3</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='50%'>
+<b>3</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='50%'><b>3</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='50%'><b>3</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='50%'><b>3</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='53%'><b>16</b> steps passed</small></div>
+<div>
+<small data-tooltip='10%'><b>3</b> steps failed,
+<b>11</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Test User CRUD operations on Petstore API for user/Endpoint":2.214,"Test Delete User/Endpoint operation on Petstore API":0.837,"Validate switching Weather info [Temperature - time format] Functionality and chance of raining":1.111,"Test Get User/Endpoint operation on Petstore API":0.833,"Test Create User/Endpoint operation on Petstore API":0.862,"Test Put User/Endpoint operation on Petstore API":1.06
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@API_Regression</td>
+<td>2</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>40%</td>
+</tr>
+<tr>
+<td>@Regression</td>
+<td>3</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@Mobile_Regression</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@invalid_Post_Req</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@E2E_Req</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 3,
+failParent: 3,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 3,
+failChild: 3,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 16,
+failGrandChild: 3,
+warningGrandChild: 0,
+skipGrandChild: 11,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@API_Regression</a><a class="dropdown-item" href="#">@Regression</a><a class="dropdown-item" href="#">@Mobile_Regression</a><a class="dropdown-item" href="#">@invalid_Post_Req</a><a class="dropdown-item" href="#">@E2E_Req</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test User CRUD operations on Petstore API for user/Endpoint</p>
+            <p class="text-sm">
+              <span>9:51:02 PM</span> / <span>00:00:02:214</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Test User CRUD operations on Petstore API for user/Endpoint</h5>
+<span class='badge badge-success'>05.19.2025 9:51:02 PM</span>
+<span class='badge badge-danger'>05.19.2025 9:51:05 PM</span>
+<span class='badge badge-default'>00:00:02:214</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>End-to-End User lifecycle (Create → Read → Update → Delete) for user/Endpoint</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="steps.api.users.PostUser_StepDef.theUserSendsAValidPOSTRequestToTheUserEndpoint()">
+                <span>Given the user sends a valid POST request to the user endpoint</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at api.driver.PostRequest.send(PostRequest.java:15)
+	at api.driver.RequestInitializer.send(RequestInitializer.java:237)
+	at api.driver.RequestInitializer.sendRequest(RequestInitializer.java:124)
+	at pages.api.users.PostUser.invokePostUserEndpointWithValidKey(PostUser.java:57)
+	at steps.api.users.PostUser_StepDef.theUserSendsAValidPOSTRequestToTheUserEndpoint(PostUser_StepDef.java:18)
+	at ✽.the user sends a valid POST request to the user endpoint(file:///Users/amr.elgarhy/Documents/GitHub/Q-Pros/src/test/java/features/api/E2E-CRUD-UserEndpoint.feature:9)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="steps.api.status_code_assertions.StatusCodeAssertions_StepDef.apiResponseStatusCodeShouldBeSC_CREATED()">
+                <span>Then API response status code should be SC_CREATED.</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="steps.api.users.PostUser_StepDef.theResponseShouldContainUserDetails()">
+                <span>And the response should contain user details</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="steps.api.users.GetUser_StepDef.userSendsAGETRequestToRetrieveAUserWithValidRequest()">
+                <span>When User sends a GET request to retrieve a user with valid request</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="steps.api.status_code_assertions.StatusCodeAssertions_StepDef.apiResponseStatusCodeShouldBeSC_OK()">
+                <span>Then API response status code should be SC_OK.</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="steps.api.users.GetUser_StepDef.theResponseShouldContainUserInfo()">
+                <span>And the response should contain user info</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="steps.api.users.PutUser_StepDef.theUserSendsAValidPUTRequestToUpdateTheEmailAndPhone()">
+                <span>When the user sends a valid PUT request to update the email and phone</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="steps.api.status_code_assertions.StatusCodeAssertions_StepDef.apiResponseStatusCodeShouldBeSC_OK()">
+                <span>Then API response status code should be SC_OK.</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="steps.api.users.PutUser_StepDef.theUpdatedUserInfoShouldReflectTheChanges()">
+                <span>And the updated user info should reflect the changes</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="steps.api.users.DeleteUser_StepDef.theUserSendsADELETERequestTo(java.lang.String)">
+                <span>When the user sends a DELETE request to "New user101"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="steps.api.status_code_assertions.StatusCodeAssertions_StepDef.apiResponseStatusCodeShouldBeSC_OK()">
+                <span>Then API response status code should be SC_OK.</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="steps.api.users.DeleteUser_StepDef.theUserShouldNoLongerBeRetrievable()">
+                <span>And the user should no longer be retrievable</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="15"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test Delete User/Endpoint operation on Petstore API</p>
+            <p class="text-sm">
+              <span>9:51:05 PM</span> / <span>00:00:00:837</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Test Delete User/Endpoint operation on Petstore API</h5>
+<span class='badge badge-success'>05.19.2025 9:51:05 PM</span>
+<span class='badge badge-danger'>05.19.2025 9:51:05 PM</span>
+<span class='badge badge-default'>00:00:00:837</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="16"><span class="badge log fail-bg mr-2">Fail</span>Validate DELETE /user/{username} fails for non-existent users</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="steps.api.users.DeleteUser_StepDef.theUserSendsADELETERequestToInvalidUsername()">
+                <span>When the user sends a DELETE request to invalid username</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="steps.api.status_code_assertions.StatusCodeAssertions_StepDef.apiResponseStatusCodeShouldBeSC_BAD_REQUEST()">
+                <span>Then API response status code should be SC_BAD_REQUEST.</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected [400] but found [405]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at org.testng.Assert.assertEquals(Assert.java:1429)
+	at org.testng.asserts.Assertion$27.doAssert(Assertion.java:348)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:344)
+	at utiltites.assertions.Assert.responseStatusCodeEquals(Assert.java:350)
+	at pages.api.status_code_assertions.StatusCodeAssertions.apiResponseStatusCodeShouldBeSC_BAD_REQUEST(StatusCodeAssertions.java:29)
+	at steps.api.status_code_assertions.StatusCodeAssertions_StepDef.apiResponseStatusCodeShouldBeSC_BAD_REQUEST(StatusCodeAssertions_StepDef.java:31)
+	at ✽.API response status code should be SC_BAD_REQUEST.(file:///Users/amr.elgarhy/Documents/GitHub/Q-Pros/src/test/java/features/api/testDeleteUserEndpoint.feature:10)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="19"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Validate switching Weather info [Temperature - time format] Functionality and chance of raining</p>
+            <p class="text-sm">
+              <span>9:51:05 PM</span> / <span>00:00:01:111</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Validate switching Weather info [Temperature - time format] Functionality and chance of raining</h5>
+<span class='badge badge-success'>05.19.2025 9:51:05 PM</span>
+<span class='badge badge-danger'>05.19.2025 9:51:07 PM</span>
+<span class='badge badge-default'>00:00:01:111</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a user,
+I want to customize the display settings
+So that I can view temperature, time info in my preferred format</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="20"><span class="badge log pass-bg mr-2">Pass</span>Validate Change temperature unit from Celsius to Fahrenheit</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="steps.mobile.weatherHomePage_StepDef.validateThatUserLandsOnWeatherHomeScreen()">
+                <span>Then Validate that user lands on weather home screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="steps.mobile.weatherHomePage_StepDef.userNavigatesToSettings()">
+                <span>When User navigates to Settings</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="steps.mobile.weatherHomePage_StepDef.userSelectOptionFromBurgerMenuSetting(java.lang.String)">
+                <span>And User select "Unit setting" option from burger menu setting</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="steps.mobile.weatherHomePage_StepDef.userChangeTemperatureUnitTo(java.lang.String)">
+                <span>When User change temperature unit to "°F"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="steps.mobile.weatherHomePage_StepDef.userClicksOnDoneCTA()">
+                <span>And User clicks on Done CTA</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="steps.mobile.weatherHomePage_StepDef.validateThatTemperatureUnitReflectedOnBurgerMenuSideMenuWith(java.lang.String)">
+                <span>Then Validate that temperature unit reflected on burger menu side-menu with "°F"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="steps.mobile.weatherHomePage_StepDef.userSelectOptionFromBurgerMenuSetting(java.lang.String)">
+                <span>And User select "Home" option from burger menu setting</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="steps.mobile.weatherHomePage_StepDef.validateThatUserLandsOnWeatherHomeScreen()">
+                <span>Then Validate that user lands on weather home screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="steps.mobile.weatherHomePage_StepDef.validateThatMainScreenShouldDisplayTemperatureIn(java.lang.String)">
+                <span>And Validate that main screen should display temperature in "°F"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="22"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test Get User/Endpoint operation on Petstore API</p>
+            <p class="text-sm">
+              <span>9:51:05 PM</span> / <span>00:00:00:833</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Test Get User/Endpoint operation on Petstore API</h5>
+<span class='badge badge-success'>05.19.2025 9:51:05 PM</span>
+<span class='badge badge-danger'>05.19.2025 9:51:06 PM</span>
+<span class='badge badge-default'>00:00:00:833</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="23"><span class="badge log fail-bg mr-2">Fail</span>Validate GET /user/{username} fails for invalid usernames</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="steps.api.users.GetUser_StepDef.theUserSendsAGETRequestToInvalidUsername()">
+                <span>When the user sends a GET request to invalid username</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="steps.api.status_code_assertions.StatusCodeAssertions_StepDef.apiResponseStatusCodeShouldBeSC_BAD_REQUEST()">
+                <span>Then API response status code should be SC_BAD_REQUEST.</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected [400] but found [405]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at org.testng.Assert.assertEquals(Assert.java:1429)
+	at org.testng.asserts.Assertion$27.doAssert(Assertion.java:348)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:344)
+	at utiltites.assertions.Assert.responseStatusCodeEquals(Assert.java:350)
+	at pages.api.status_code_assertions.StatusCodeAssertions.apiResponseStatusCodeShouldBeSC_BAD_REQUEST(StatusCodeAssertions.java:29)
+	at steps.api.status_code_assertions.StatusCodeAssertions_StepDef.apiResponseStatusCodeShouldBeSC_BAD_REQUEST(StatusCodeAssertions_StepDef.java:31)
+	at ✽.API response status code should be SC_BAD_REQUEST.(file:///Users/amr.elgarhy/Documents/GitHub/Q-Pros/src/test/java/features/api/testGetUserEndpoint.feature:10)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="27"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test Create User/Endpoint operation on Petstore API</p>
+            <p class="text-sm">
+              <span>9:51:06 PM</span> / <span>00:00:00:862</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Test Create User/Endpoint operation on Petstore API</h5>
+<span class='badge badge-success'>05.19.2025 9:51:06 PM</span>
+<span class='badge badge-danger'>05.19.2025 9:51:07 PM</span>
+<span class='badge badge-default'>00:00:00:862</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="28"><span class="badge log pass-bg mr-2">Pass</span>Validate POST /user fails with missing body in request</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="steps.api.users.PostUser_StepDef.theUserSendsAPOSTRequestWithInvalidRequestBody()">
+                <span>Given the user sends a POST request with invalid request body</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="steps.api.status_code_assertions.StatusCodeAssertions_StepDef.apiResponseStatusCodeShouldBeSC_BAD_REQUEST()">
+                <span>Then API response status code should be SC_BAD_REQUEST.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="steps.api.error_code_assertions.ErrorCodeAssertions_StepDef.apiResponsePayloadShouldContainsInvalidBadRequestErrorMessage()">
+                <span>And API response payload should contains invalid bad request error message.</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="39"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test Put User/Endpoint operation on Petstore API</p>
+            <p class="text-sm">
+              <span>9:51:07 PM</span> / <span>00:00:01:060</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Test Put User/Endpoint operation on Petstore API</h5>
+<span class='badge badge-success'>05.19.2025 9:51:07 PM</span>
+<span class='badge badge-danger'>05.19.2025 9:51:08 PM</span>
+<span class='badge badge-default'>00:00:01:060</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=39</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="40"><span class="badge log pass-bg mr-2">Pass</span>Validate PUT /user/{username} fails with invalid update data</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="steps.api.users.PutUser_StepDef.theUserSendsAPUTRequestToInvalidUsername()">
+                <span>When the user sends a PUT request to invalid username</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="steps.api.status_code_assertions.StatusCodeAssertions_StepDef.apiResponseStatusCodeShouldBeSC_BAD_REQUEST()">
+                <span>Then API response status code should be SC_BAD_REQUEST.</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">5</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">@API_Regression</p>
+<p class="duration text-sm">5 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@API_Regression</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:51:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>End-to-End User lifecycle (Create → Read → Update → Delete) for user/Endpoint</a>
+<div class="">
+<span class="badge badge-default">Test User CRUD operations on Petstore API for user/Endpoint.End-to-End User lifecycle (Create → Read → Update → Delete) for user/Endpoint</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:51:05 PM</td>
+<td>
+<a href="#" class="linked" test-id='15' id='16'>Validate DELETE /user/{username} fails for non-existent users</a>
+<div class="">
+<span class="badge badge-default">Test Delete User/Endpoint operation on Petstore API.Validate DELETE /user/{username} fails for non-existent users</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:51:05 PM</td>
+<td>
+<a href="#" class="linked" test-id='22' id='23'>Validate GET /user/{username} fails for invalid usernames</a>
+<div class="">
+<span class="badge badge-default">Test Get User/Endpoint operation on Petstore API.Validate GET /user/{username} fails for invalid usernames</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>21:51:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='28'>Validate POST /user fails with missing body in request</a>
+<div class="">
+<span class="badge badge-default">Test Create User/Endpoint operation on Petstore API.Validate POST /user fails with missing body in request</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>21:51:07 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='40'>Validate PUT /user/{username} fails with invalid update data</a>
+<div class="">
+<span class="badge badge-default">Test Put User/Endpoint operation on Petstore API.Validate PUT /user/{username} fails with invalid update data</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">@Regression</p>
+<p class="duration text-sm">6 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Regression</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:51:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>End-to-End User lifecycle (Create → Read → Update → Delete) for user/Endpoint</a>
+<div class="">
+<span class="badge badge-default">Test User CRUD operations on Petstore API for user/Endpoint.End-to-End User lifecycle (Create → Read → Update → Delete) for user/Endpoint</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:51:05 PM</td>
+<td>
+<a href="#" class="linked" test-id='15' id='16'>Validate DELETE /user/{username} fails for non-existent users</a>
+<div class="">
+<span class="badge badge-default">Test Delete User/Endpoint operation on Petstore API.Validate DELETE /user/{username} fails for non-existent users</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>21:51:05 PM</td>
+<td>
+<a href="#" class="linked" test-id='19' id='20'>Validate Change temperature unit from Celsius to Fahrenheit</a>
+<div class="">
+<span class="badge badge-default">Validate switching Weather info [Temperature - time format] Functionality and chance of raining.Validate Change temperature unit from Celsius to Fahrenheit</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:51:05 PM</td>
+<td>
+<a href="#" class="linked" test-id='22' id='23'>Validate GET /user/{username} fails for invalid usernames</a>
+<div class="">
+<span class="badge badge-default">Test Get User/Endpoint operation on Petstore API.Validate GET /user/{username} fails for invalid usernames</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>21:51:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='28'>Validate POST /user fails with missing body in request</a>
+<div class="">
+<span class="badge badge-default">Test Create User/Endpoint operation on Petstore API.Validate POST /user fails with missing body in request</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>21:51:07 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='40'>Validate PUT /user/{username} fails with invalid update data</a>
+<div class="">
+<span class="badge badge-default">Test Put User/Endpoint operation on Petstore API.Validate PUT /user/{username} fails with invalid update data</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Mobile_Regression</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Mobile_Regression</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>21:51:05 PM</td>
+<td>
+<a href="#" class="linked" test-id='19' id='20'>Validate Change temperature unit from Celsius to Fahrenheit</a>
+<div class="">
+<span class="badge badge-default">Validate switching Weather info [Temperature - time format] Functionality and chance of raining.Validate Change temperature unit from Celsius to Fahrenheit</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@invalid_Post_Req</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@invalid_Post_Req</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>21:51:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='28'>Validate POST /user fails with missing body in request</a>
+<div class="">
+<span class="badge badge-default">Test Create User/Endpoint operation on Petstore API.Validate POST /user fails with missing body in request</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@E2E_Req</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@E2E_Req</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:51:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>End-to-End User lifecycle (Create → Read → Update → Delete) for user/Endpoint</a>
+<div class="">
+<span class="badge badge-default">Test User CRUD operations on Petstore API for user/Endpoint.End-to-End User lifecycle (Create → Read → Update → Delete) for user/Endpoint</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:51:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Given the user sends a valid POST request to the user endpoint</a>
+<div class="">
+<span class="badge badge-default">Test User CRUD operations on Petstore API for user/Endpoint.End-to-End User lifecycle (Create → Read → Update → Delete) for user/Endpoint.Given the user sends a valid POST request to the user endpoint</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:51:05 PM</td>
+<td>
+<a href="#" class="linked" test-id='15' id='18'>Then API response status code should be SC_BAD_REQUEST.</a>
+<div class="">
+<span class="badge badge-default">Test Delete User/Endpoint operation on Petstore API.Validate DELETE /user/{username} fails for non-existent users.Then API response status code should be SC_BAD_REQUEST.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>21:51:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='22' id='26'>Then API response status code should be SC_BAD_REQUEST.</a>
+<div class="">
+<span class="badge badge-default">Test Get User/Endpoint operation on Petstore API.Validate GET /user/{username} fails for invalid usernames.Then API response status code should be SC_BAD_REQUEST.</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c05cd28cde1617b9d0c05a831daff6cb97fd9fd5/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

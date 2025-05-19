@@ -1,0 +1,7 @@
+{
+  "User_InvalidBadRequestErrorMessage": "No User provided. Try again?",
+  "User_InvalidUnauthorizedErrorMessage": "Unauthorized",
+  "User_InvalidForbiddenErrorMessage": "User is not authorized to access this resource with an explicit deny",
+  "User_InvalidNotFoundErrorMessage": "Profile doesn't exist",
+  "User_InvalidServerErrorMessage": "There was an error processing your request. It has been logged"
+}
